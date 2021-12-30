@@ -3,8 +3,8 @@ import { Stack, Image } from "react-bootstrap";
 
 function TopHeader() {
   return (
-    <div className="mt-5 bg-warning pb-4">
-      <div className="container me-auto">
+    <div className="mt-5 bg-warning py-4">
+      <div className="container">
         <Stack direction="horizontal" gap={5}>
           <div className="w-50">
             <Image

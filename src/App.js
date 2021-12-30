@@ -107,9 +107,9 @@ function App() {
       <Container className="bg-light py-4">
         <h2>Features</h2>
         <Row>
-          <Col className="m-2">
+          <Col className="" sm={12} md={4}>
             <Card>
-              <Card.Img variant="top" src="./images/operator.png" />
+              <Card.Img variant="top" src="./images/fuel.png" />
               <Card.Body>
                 <Card.Title>Hemat Fuel</Card.Title>
                 <Card.Text>
@@ -121,9 +121,9 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col className="m-2">
+          <Col className="" sm={12} md={4}>
             <Card>
-              <Card.Img variant="top" src="./images/operator.png" />
+              <Card.Img variant="top" src="./images/component.png" />
               <Card.Body>
                 <Card.Title>Extend Component Life</Card.Title>
                 <Card.Text>
@@ -134,9 +134,9 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col className="m-2">
+          <Col className="" sm={12} md={4}>
             <Card>
-              <Card.Img variant="top" src="./images/operator.png" />
+              <Card.Img variant="top" src="./images/safety.png" />
               <Card.Body>
                 <Card.Title>Improve Safety</Card.Title>
                 <Card.Text>
