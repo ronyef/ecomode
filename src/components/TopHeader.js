@@ -16,7 +16,7 @@ function TopHeader() {
             <span className="fs-1 fw-bold d-block">Produktifitas</span>
             <span className="fs-3 fw-light me-2">adalah</span>
             <span className="fs-1 fw-bold ">Prioritas</span>
-            <p className="fs-4"><strong>Reliability</strong> tetap tujuan pasti.</p>
+            <p className="fs-4"><strong>Reliability</strong> tetap target pasti.</p>
             <p className="text-right font-weight-light text-white">--Mekatronik AP</p>
           </div>
         </Stack>

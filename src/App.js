@@ -82,9 +82,10 @@ function App() {
                 <li>Power Mode - Saat bermuatan.</li>
                 <li>Eco Mode - Bermuatan di turunan.</li>
                 <li>Eco Mode - Bermuatan saat beban transmisi ringan.</li>
+                <li>Dan lain sebagainya...</li>
               </ul>
               <p>
-                Begitu banyak kondisi sehingga operator mengaktifkan Power Mode
+                Begitu banyak kondisi sehingga operator lebih memilih mengaktifkan Power Mode
                 terus menerus.
               </p>
             </Col>
