@@ -60,16 +60,16 @@ function App() {
       <div className='my-4' style={{backgroundImage: "url('./images/miningTruck1.png')", backgroundSize: 'cover',}}>
         <Container className="py-4">
           <Row>
-            <Col md={{ span: 6, offset: 6 }}>
-              <h2 className="text-dark">Pemilihan mode yang tepat:</h2>
-              <ul className="text-dark">
+            <Col md={{ span: 6, offset: 6 }} style={{backgroundColor: 'rgba(0,0,0,.3)'}} className="text-white py-2 px-3 rounded" >
+              <h2 >Pemilihan mode yang tepat:</h2>
+              <ul>
                 <li>Eco Mode - Saat muatan kosong.</li>
                 <li>Power Mode - Saat muatan kosong tanjakan.</li>
                 <li>Power Mode - Saat bermuatan.</li>
                 <li>Eco Mode - Bermuatan di turunan.</li>
                 <li>Eco Mode - Bermuatan saat beban transmisi ringan.</li>
               </ul>
-              <p className="text-dark">Begitu banyak kondisi sehingga operator mengaktifkan Power Mode terus menerus.</p>
+              <p>Begitu banyak kondisi sehingga operator mengaktifkan Power Mode terus menerus.</p>
             </Col>
           </Row>
         </Container>
