@@ -1,10 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import TopNav from "./components/TopNav";
 import TopHeader from "./components/TopHeader";
 import {
-  Stack,
-  Image,
   Container,
   Row,
   Col,
