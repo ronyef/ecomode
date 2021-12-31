@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import TopNav from "./components/TopNav";
 import TopHeader from "./components/TopHeader";
@@ -9,9 +10,22 @@ import {
   Stack,
   Image,
   Button,
+  Form,
 } from "react-bootstrap";
+import { formatIDR } from "./utilities/idrFormatter";
 
 function App() {
+  const [lph, setLph] = useState(2);
+  const [unit, setUnit] = useState(50);
+  const [workHour, setWorkHour] = useState(20);
+  const [savedCost, setSavedCost] = useState(0);
+  const [fuelPrice, setFuelPrice] = useState(14100);
+
+  const calculate = (e) => {
+    e.preventDefault();
+    setSavedCost(lph * workHour * fuelPrice * unit);
+  };
+
   return (
     <div>
       <TopNav />
@@ -170,7 +184,7 @@ function App() {
         </Container>
       </section>
       <section id="pricing">
-        <Container className="my-4">
+        <Container className="my-5">
           <h2>Pricing</h2>
           <Row>
             <Col sm={12} md={4}>
@@ -179,7 +193,7 @@ function App() {
             <Col md="8">
               <Row>
                 <Col sm={12} md={4}>
-                  <Card className="text-center">
+                  <Card className="text-center mt-2">
                     <Card.Header className="bg-danger text-white">
                       FREE TRIAL
                     </Card.Header>
@@ -194,7 +208,7 @@ function App() {
                   </Card>
                 </Col>
                 <Col sm={12} md={4}>
-                  <Card className="text-center">
+                  <Card className="text-center mt-2">
                     <Card.Header className="bg-warning text-dark">
                       PRO
                     </Card.Header>
@@ -209,7 +223,7 @@ function App() {
                   </Card>
                 </Col>
                 <Col sm={12} md={4}>
-                  <Card className="text-center">
+                  <Card className="text-center mt-2">
                     <Card.Header className="bg-success text-white">
                       ENTERPRISE
                     </Card.Header>
@@ -227,6 +241,72 @@ function App() {
             </Col>
           </Row>
         </Container>
+        <div className="mt-4" className="bg-warning">
+          <Container className="py-4">
+            <h3>Saving Calculator</h3>
+            <p>Berapa potensi penghematan fuel cost saya?</p>
+            <Row className="mt-4">
+              <Col sm={12} md={4}>
+                <Card className="shadow mb-4">
+                  <Card.Body>
+                    <Form onSubmit={calculate}>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Fuel Saving (liter per jam)</Form.Label>
+                        <Form.Control
+                          type="number"
+                          value={lph}
+                          onChange={(e) => setLph(e.target.value)}
+                        />
+                        <Form.Text className="text-muted">
+                          Berdasar asumsi dan data pengguna.
+                        </Form.Text>
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Jumlah Unit</Form.Label>
+                        <Form.Control type="number" value={unit} />
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Jam Kerja per Hari</Form.Label>
+                        <Form.Control type="number" value={workHour} />
+                      </Form.Group>
+                      <Button variant="dark" type="submit">
+                        Hitung
+                      </Button>
+                    </Form>
+                  </Card.Body>
+                </Card>
+              </Col>
+              {savedCost > 0 && (
+                <Col>
+                  <p>
+                    Dengan harga fuel/solar per liter sebesar{" "}
+                    {formatIDR(fuelPrice)}, maka estimasi nilai penghematan saya
+                    adalah sebesar:
+                  </p>
+                  <ul>
+                    <li className="fs-6 fw-bold">
+                      {formatIDR(savedCost)} per hari
+                    </li>
+                    <li className="fs-6 fw-bold">
+                      {formatIDR(savedCost * 29)} per bulan
+                    </li>
+                    <li className="fs-6 fw-bold">
+                      {formatIDR(savedCost * 29 * 12)} per tahun
+                    </li>
+                  </ul>
+                  <p className="text-muted">
+                    Dengan asumsi 29 hari kerja unit perbulan
+                  </p>
+                </Col>
+              )}
+              {savedCost > 0 && (
+                <Col>
+                  <Image src="./images/BillySaving.png" fluid />
+                </Col>
+              )}
+            </Row>
+          </Container>
+        </div>
       </section>
     </div>
   );
