@@ -68,51 +68,51 @@ function App() {
             </Col>
           </Row>
         </Container>
-      
-      <div
-        className="my-4"
-        style={{
-          backgroundImage: "url('./images/miningTruck1.png')",
-          backgroundSize: "cover",
-        }}
-      >
-        <Container className="py-4">
+
+        <div
+          className="my-4"
+          style={{
+            backgroundImage: "url('./images/miningTruck1.png')",
+            backgroundSize: "cover",
+          }}
+        >
+          <Container className="py-4">
+            <Row>
+              <Col
+                md={{ span: 6, offset: 6 }}
+                style={{ backgroundColor: "rgba(0,0,0,.3)" }}
+                className="text-white py-2 px-3 rounded"
+              >
+                <h2>Pemilihan mode yang tepat:</h2>
+                <ul>
+                  <li>Eco Mode - Saat muatan kosong.</li>
+                  <li>Power Mode - Saat muatan kosong tanjakan.</li>
+                  <li>Power Mode - Saat bermuatan.</li>
+                  <li>Eco Mode - Bermuatan di turunan.</li>
+                  <li>Eco Mode - Bermuatan saat beban transmisi ringan.</li>
+                  <li>Dan lain sebagainya...</li>
+                </ul>
+                <p>
+                  Begitu banyak kondisi sehingga operator lebih memilih
+                  mengaktifkan Power Mode terus menerus.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <Container className="my-5">
+          <h2>Inovasi Untuk Productivity & Reliability</h2>
           <Row>
-            <Col
-              md={{ span: 6, offset: 6 }}
-              style={{ backgroundColor: "rgba(0,0,0,.3)" }}
-              className="text-white py-2 px-3 rounded"
-            >
-              <h2>Pemilihan mode yang tepat:</h2>
-              <ul>
-                <li>Eco Mode - Saat muatan kosong.</li>
-                <li>Power Mode - Saat muatan kosong tanjakan.</li>
-                <li>Power Mode - Saat bermuatan.</li>
-                <li>Eco Mode - Bermuatan di turunan.</li>
-                <li>Eco Mode - Bermuatan saat beban transmisi ringan.</li>
-                <li>Dan lain sebagainya...</li>
-              </ul>
+            <Col lg={{ span: 8 }}>
               <p>
-                Begitu banyak kondisi sehingga operator lebih memilih
-                mengaktifkan Power Mode terus menerus.
+                Kami rancang sebuah sistem yang secara terus menerus memonitor
+                setiap kondisi operasi dan menentukan mode yang tepat untuk
+                meningkatkan performance unit.
               </p>
+              <Image src="./images/blockDiagram.jpg" fluid />
             </Col>
           </Row>
         </Container>
-      </div>
-      <Container className="my-5">
-        <h2>Inovasi Untuk Productivity & Reliability</h2>
-        <Row>
-          <Col lg={{ span: 8 }}>
-            <p>
-              Kami rancang sebuah sistem yang secara terus menerus memonitor
-              setiap kondisi operasi dan menentukan mode yang tepat untuk
-              meningkatkan performance unit.
-            </p>
-            <Image src="./images/blockDiagram.jpg" fluid />
-          </Col>
-        </Row>
-      </Container>
       </section>
       <section id="features">
         <Container className="bg-light py-4 my-4">
@@ -172,40 +172,60 @@ function App() {
       <section id="pricing">
         <Container className="my-4">
           <h2>Pricing</h2>
-          <Stack direction="horizontal" gap={3}>
-            <Image src="./images/BillyRocket.jpg" fluid />
-            <Card className="text-center">
-              <Card.Header className="bg-danger text-white">FREE TRIAL</Card.Header>
-              <Card.Body>
-                <Card.Title>IDR 0</Card.Title>
-                <Card.Text>
-                  Gratis pemasangan Smart Ecomode system untuk customer yang
-                  eligible.
-                </Card.Text>
-                <Button variant="outline-primary">Dapatkan RFQ</Button>
-              </Card.Body>
-            </Card>
-            <Card className="text-center">
-              <Card.Header className="bg-warning text-dark">PRO</Card.Header>
-              <Card.Body>
-                <Card.Title>&lt; 50 unit</Card.Title>
-                <Card.Text>
-                  Instalasi mandiri dengan remote support dan fair warranty.
-                </Card.Text>
-                <Button variant="outline-primary">Dapatkan RFQ</Button>
-              </Card.Body>
-            </Card>
-            <Card className="text-center">
-              <Card.Header className="bg-success text-white">ENTERPRISE</Card.Header>
-              <Card.Body>
-                <Card.Title>&gt; 50 unit</Card.Title>
-                <Card.Text>
-                  Gratis biaya instalasi dan mendapatkan full support & extended warranty.
-                </Card.Text>
-                <Button variant="outline-primary">Dapatkan RFQ</Button>
-              </Card.Body>
-            </Card>
-          </Stack>
+          <Row>
+            <Col sm={12} md={4}>
+              <Image src="./images/BillyRocket.jpg" fluid />
+            </Col>
+            <Col md="8">
+              <Row>
+                <Col sm={12} md={4}>
+                  <Card className="text-center">
+                    <Card.Header className="bg-danger text-white">
+                      FREE TRIAL
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>IDR 0</Card.Title>
+                      <Card.Text>
+                        Gratis pemasangan Smart Ecomode system untuk customer
+                        yang eligible.
+                      </Card.Text>
+                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col sm={12} md={4}>
+                  <Card className="text-center">
+                    <Card.Header className="bg-warning text-dark">
+                      PRO
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>&lt; 50 unit</Card.Title>
+                      <Card.Text>
+                        Instalasi mandiri dengan remote support dan fair
+                        warranty.
+                      </Card.Text>
+                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col sm={12} md={4}>
+                  <Card className="text-center">
+                    <Card.Header className="bg-success text-white">
+                      ENTERPRISE
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Title>&gt; 50 unit</Card.Title>
+                      <Card.Text>
+                        Gratis biaya instalasi dan mendapatkan full support &
+                        extended warranty.
+                      </Card.Text>
+                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         </Container>
       </section>
     </div>
