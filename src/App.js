@@ -263,11 +263,11 @@ function App() {
                       </Form.Group>
                       <Form.Group className="mb-3">
                         <Form.Label>Jumlah Unit</Form.Label>
-                        <Form.Control type="number" value={unit} />
+                        <Form.Control type="number" value={unit} onChange={(e) => setUnit(e.target.value)} />
                       </Form.Group>
                       <Form.Group className="mb-3">
                         <Form.Label>Jam Kerja per Hari</Form.Label>
-                        <Form.Control type="number" value={workHour} />
+                        <Form.Control type="number" value={workHour} onChange={(e) => setWorkHour(e.target.value)} />
                       </Form.Group>
                       <Button variant="dark" type="submit">
                         Hitung
