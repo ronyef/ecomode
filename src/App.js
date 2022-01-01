@@ -13,6 +13,7 @@ import {
   Form,
 } from "react-bootstrap";
 import { formatIDR } from "./utilities/idrFormatter";
+import Footer from "./components/Footer";
 
 function App() {
   const [lph, setLph] = useState(2);
@@ -128,8 +129,8 @@ function App() {
           </Row>
         </Container>
       </section>
-      <section id="features">
-        <Container className="bg-light py-4 my-4">
+      <section id="features" className="bg-light">
+        <Container className= "py-4 my-4">
           <h2>Features</h2>
           <Row>
             <Col className="" sm={12} md={4}>
@@ -203,7 +204,7 @@ function App() {
                         Gratis pemasangan Smart Ecomode system untuk customer
                         yang eligible.
                       </Card.Text>
-                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                      <a className="btn btn-outline-dark" href="#contact" role="button">Get Quotation</a>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -218,7 +219,7 @@ function App() {
                         Instalasi mandiri dengan remote support dan fair
                         warranty.
                       </Card.Text>
-                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                      <a className="btn btn-outline-dark" href="#contact" role="button">Get Quotation</a>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -233,7 +234,7 @@ function App() {
                         Gratis biaya instalasi dan mendapatkan full support &
                         extended warranty.
                       </Card.Text>
-                      <Button variant="outline-dark">Dapatkan RFQ</Button>
+                      <a className="btn btn-outline-dark" href="#contact" role="button">Get Quotation</a>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -241,7 +242,7 @@ function App() {
             </Col>
           </Row>
         </Container>
-        <div className="mt-4" className="bg-warning">
+        <div className="mt-4 bg-warning">
           <Container className="py-4">
             <h3>Saving Calculator</h3>
             <p>Berapa potensi penghematan fuel cost saya?</p>
@@ -307,6 +308,9 @@ function App() {
             </Row>
           </Container>
         </div>
+      </section>
+      <section id="contact">
+        <Footer />
       </section>
     </div>
   );

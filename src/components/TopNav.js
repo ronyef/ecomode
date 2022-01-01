@@ -28,7 +28,7 @@ export default function TopNav() {
           </Nav>
           <Nav>
             <Nav.Link href="#deets">PT MAP</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="#contact">
               Contact
             </Nav.Link>
           </Nav>
