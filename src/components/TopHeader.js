@@ -8,7 +8,7 @@ function TopHeader() {
         <Stack direction="horizontal" gap={5}>
           <div className="w-50">
             <Image
-              src="https://focused-swirles-1663f8.netlify.app/images/hdsm.png"
+              src="./images/hdsmbl.png"
               fluid
             />
           </div>
