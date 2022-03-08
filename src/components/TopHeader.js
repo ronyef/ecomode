@@ -8,7 +8,7 @@ function TopHeader() {
         <Stack direction="horizontal" gap={5}>
           <div className="w-50">
             <Image
-              src="./images/hdsmbl.png"
+              src="./images/hdsm.png"
               fluid
             />
           </div>

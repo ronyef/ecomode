@@ -61,9 +61,10 @@ function App() {
                 pemaksaan untuk mengejar performa.
               </p>
             </Col>
-            <Col sm={12} md={6} className="mt-4 mt-sm-0 ps-sm-5">
+            
+            <Col sm={12} md={6} className="mt-4 mt-sm-0 ps-sm-5 md:pt-6">
               <Card>
-                <Card.Img variant="top" src="./images/operator.png" />
+                <Card.Img variant="top" src="/images/miningTruck3.png" />
                 <Card.Body>
                   <Card.Title>Operator Anda Terlalu Sibuk</Card.Title>
                   <Card.Text>
